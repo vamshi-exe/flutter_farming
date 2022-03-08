@@ -29,11 +29,7 @@ class _HeaderState extends State<Header> {
           const SizedBox(
             width: 10.0,
           ),
-          'Smart Farming'.text.bold.textStyle(GoogleFonts.poppins(fontSize: 24)).make().shimmer(
-            duration: Duration(seconds: 3),
-            primaryColor: Color.fromARGB(255, 13, 161, 18),
-            secondaryColor: Color.fromARGB(100, 253, 251, 251)
-          ),
+          'Smart Farming'.text.white.textStyle(GoogleFonts.poppins(fontSize: 24)).make(),
           const SizedBox(
             width: 250,
           ),
@@ -86,44 +82,7 @@ class _HeaderState extends State<Header> {
               ),
             ],
           ),
-          // const SizedBox(
-          //   width: 250,
-          // ),
-          // Row(
-          //   children: [
-          //     InkWell(
-          //       onTap: () {},
-          //       child: Text(
-          //         'Sign Up',
-          //         style: GoogleFonts.poppins(
-          //           fontSize: 13,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //     ),
-          //     const SizedBox(
-          //       width: 10,
-          //     ),
-          //     Container(
-          //       height: 20,
-          //       width: 1.0,
-          //       color: Colors.white,
-          //     ),
-          //     const SizedBox(
-          //       width: 10.0,
-          //     ),
-          //     InkWell(
-          //       onTap: () {},
-          //       child: Text(
-          //         'Log In',
-          //         style: GoogleFonts.poppins(
-          //           fontSize: 13,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //     ),
-          //   ],
-          // )
+         
         ],
       ),
       

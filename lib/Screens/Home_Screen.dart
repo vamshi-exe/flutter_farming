@@ -6,9 +6,12 @@ import 'package:flutter_farming/source/Header.dart';
 import 'package:flutter_farming/source/InfoPallete.dart';
 import 'package:flutter_farming/source/ProfileImage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../source/Bottom_Bar.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({ Key? key }) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -110,7 +113,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             30))),
-                                            onPressed: () {},
+                                            onPressed: () async {
+                                              final url =
+                                                  'https://www.youtube.com/watch?v=0WR4BeFcLks&ab_channel=Infosys';
+                                                  if(await canLaunch(url)) {
+                                                    await launch(url);
+
+                                                  }
+                                            },
                                             child: Container(
                                               height: 45,
                                               width: 100,
@@ -174,7 +184,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   Header(),
-                  
                 ],
               ),
               Container(
@@ -342,49 +351,24 @@ class _HomeScreenState extends State<HomeScreen> {
               //   color: Color.fromARGB(255, 150, 146, 146),
               //   thickness: 0.5,
               // ),
-              SizedBox(
-                height: 100,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    RichText(
-                        text: TextSpan(children: [
-                      TextSpan(text: 'Follow Smart Farming on ',style: GoogleFonts.poppins()),
-                      TextSpan(
-                          text: 'Twitter,',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan( text: 'Instagram ',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan(
-                            text: 'and '
-                          ),
-                          TextSpan( text: 'Facebook,',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan(
-                            text: ' .'
-                          )
-                    ])),
-                    Text(
-                      'Developed By Vamshi with ❤️',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
+              BottonBar(),
             ],
           ),
         ),
       ),
     );
+    // Future sendEmail({
+
+    //   required String email,
+    // }) async {
+    //   final url = Uri.parse();
+    //   final response = await http.post(url);
+
+    //   print(response.body);
+    // }
+
+    // widget buildTextField({
+
+    // })
   }
 }

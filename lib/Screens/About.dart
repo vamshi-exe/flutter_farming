@@ -31,7 +31,7 @@ class AboutScreen extends StatelessWidget {
                     children: [
                       Container(
                         height: 600,
-                        width: MediaQuery.of(context).size.width * 0.45,
+                        width: MediaQuery.of(context).size.width * 0.81,
                         color: Colors.white,
                         child: Stack(
                           children: [

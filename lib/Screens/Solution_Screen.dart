@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_farming/Screens/About.dart';
 import 'package:flutter_farming/Screens/Blogs.dart';
 import 'package:flutter_farming/Screens/Home_Screen.dart';
+import 'package:flutter_farming/source/Bottom_Bar.dart';
 import 'package:flutter_farming/source/ProfileImage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -13,7 +14,7 @@ import '../source/Header.dart';
 import '../source/InfoPallete.dart';
 
 class SolutionScreen extends StatefulWidget {
-  const SolutionScreen({ Key? key }) : super(key: key);
+  const SolutionScreen({Key? key}) : super(key: key);
 
   @override
   State<SolutionScreen> createState() => _SolutionScreenState();
@@ -22,7 +23,7 @@ class SolutionScreen extends StatefulWidget {
 class _SolutionScreenState extends State<SolutionScreen> {
   @override
   Widget build(BuildContext context) {
-    TextStyle linkStyle = TextStyle(color: Colors.blue);
+    TextStyle linkStyle = const TextStyle(color: Colors.blue);
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -35,8 +36,8 @@ class _SolutionScreenState extends State<SolutionScreen> {
                   Row(
                     children: [
                       Container(
-                        height: 600,
-                        width: MediaQuery.of(context).size.width * 0.45,
+                        height: 800,
+                        width: 1536,
                         color: Colors.white,
                         child: Stack(
                           children: [
@@ -51,139 +52,148 @@ class _SolutionScreenState extends State<SolutionScreen> {
                                     borderRadius: BorderRadius.circular(300)),
                               ),
                             ),
-                            // Positioned(
-                            //   top: 200,
-                            //   left: 100,
-                            //   child: Container(
-                            //     height: 400,
-                            //     width: 400,
-                            //     child: Column(
-                            //       crossAxisAlignment: CrossAxisAlignment.start,
-                            //       children: [
-                            //         Text(
-                            //           'Manage All Your Crops',
-                            //           style: GoogleFonts.nunitoSans(
-                            //               fontSize: 30,
-                            //               fontWeight: FontWeight.w700),
-                            //         ),
-                            //         Text(
-                            //           'All in one place',
-                            //           style: GoogleFonts.nunitoSans(
-                            //               fontSize: 25,
-                            //               fontWeight: FontWeight.w700),
-                            //         ),
-                            //         const SizedBox(
-                            //           height: 20,
-                            //         ),
-                            //         Container(
-                            //           width: 300,
-                            //           child: Text(
-                            //             'Farming is a essential part of human life.To make Farming easy for a farmer.',
-                            //             style: GoogleFonts.poppins(
-                            //                 fontSize: 14,
-                            //                 fontWeight: FontWeight.w300),
-                            //           ),
-                            //         ),
-                            //         const SizedBox(
-                            //           height: 30,
-                            //         ),
-                            //         Row(
-                            //           children: [
-                            //             Container(
-                            //               height: 45,
-                            //               width: 230,
-                            //               child: TextField(
-                            //                 decoration: InputDecoration(
-                            //                     hintText:
-                            //                         'Enter Your E-mail Address',
-                            //                     hintStyle: GoogleFonts.poppins(
-                            //                       fontSize: 12,
-                            //                     ),
-                            //                     border: OutlineInputBorder(
-                            //                         borderRadius:
-                            //                             BorderRadius.circular(
-                            //                                 50))),
-                            //               ),
-                            //             ),
-                            //             const SizedBox(
-                            //               width: 20,
-                            //             ),
-                            //             TextButton(
-                            //                 style: TextButton.styleFrom(
-                            //                     backgroundColor: Colors.black87,
-                            //                     shape: RoundedRectangleBorder(
-                            //                         borderRadius:
-                            //                             BorderRadius.circular(
-                            //                                 30))),
-                            //                 onPressed: () {},
-                            //                 child: Container(
-                            //                   height: 45,
-                            //                   width: 100,
-                            //                   child: Center(
-                            //                     child: Text(
-                            //                       'Get Video Link',
-                            //                       style: GoogleFonts.poppins(
-                            //                         color: Colors.white,
-                            //                         fontSize: 13,
-                            //                       ),
-                            //                     ),
-                            //                   ),
-                            //                 ))
-                            //           ],
-                            //         )
-                            //       ],
-                            //     ),
-                            //   ),
-                            // )
+                            Positioned(
+                              top: 100,
+                              left: 50,
+                              child: Container(
+                                height: 800,
+                                width: 1920,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Frequently Asked Questions (FAQ's)",
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 30)),
+                                    Text(
+                                      'What is Smart Farming ?',
+                                      style: GoogleFonts.nunitoSans(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 10)),
+                                    Container(
+                                      height: 100,
+                                      width: 1200,
+                                      child: Text(
+                                        "--> Smart farming is a management concept focused on providing the agricultural industry with the infrastructure to leverage advanced technology  including big data, the cloud and the internet of things (IoT)  for tracking, monitoring, automating and analyzing operations.",
+                                        style: GoogleFonts.nunitoSans(
+                                            fontWeight: FontWeight.w200,
+                                            fontSize: 20),
+                                      ),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 0)),
+                                    Text(
+                                      'Why Smart Farming ?',
+                                      style: GoogleFonts.nunitoSans(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 10)),
+                                    Container(
+                                      height: 100,
+                                      width: 1200,
+                                      child: Text(
+                                        "--> Increasing control over production leads to better cost management and waste reduction. The ability to trace anomalies in crop growth or livestock health, for instance, helps eliminate the risk of losing yields. Additionally, automation boosts efficiency.",
+                                        style: GoogleFonts.nunitoSans(
+                                            fontWeight: FontWeight.w200,
+                                            fontSize: 20),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Why are checks for normality of residuals and homoscedasticity so often overlooked when calibrating predictive models? ?',
+                                      style: GoogleFonts.nunitoSans(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(top: 10)),
+                                    Container(
+                                      height: 300,
+                                      width: 1200,
+                                      child: Text(
+                                        "--> The OLS is a short cut to the ML solution. It can be derived directly from the assumption that Y|X ~ N(µ(X), s²), but the solution is correct for any distribution model: justlike the ML estimate, the OLS estimate estimates the expected value (of the parameter) and this is independent of the assumed distribution model .The difference, therefore, is not in the predicted value, but rather in the uncertainty attributed to this prediction. Depending on the research context, this uncertainty may or may not be relevant. If it is not relevant, then there is no need invest much mental work in figuring out a 'most correct' or 'least wrong' distribution model.When models are really used for prediction, the 'model inherent' uncertainty (that is determined by the chosen distribution model) associated with a prediction is usually not relevant. What is of much greater relevance and impact here is the differences in predictions between possible alternative models. This is particularily relevant when the predictions are forecasts. Provided there is sufficient data, this pleiotropy of possible alternative models can be adressed by heavily over-parametrized models where the impact of the assumed distributional model approaches zero (such models are nowadays called 'deep-learning' models, neural networks, AI etc,). This is then very much on the side of getting most correct predictions at the cost of gaining the least amount of insight. But it works to get predictions with good or acceptable positive and negative predictive values.",
+                                        style: GoogleFonts.nunitoSans(
+                                            fontWeight: FontWeight.w200,
+                                            fontSize: 20),
+                                      ),
+                                      // Container(
+                                      //   width: 300,
+                                      //   child: Text(
+                                      //     'Farming is a essential part of human life.To make Farming easy for a farmer.',
+                                      //     style: GoogleFonts.poppins(
+                                      //         fontSize: 14,
+                                      //         fontWeight: FontWeight.w300),
+                                      //   ),
+                                      // ),
+                                      // const SizedBox(
+                                      //   height: 30,
+                                      // ),
+                                      // Row(
+                                      //   children: [
+                                      //     Container(
+                                      //       height: 45,
+                                      //       width: 230,
+                                      //       child: TextField(
+                                      //         decoration: InputDecoration(
+                                      //             hintText:
+                                      //                 'Enter Your E-mail Address',
+                                      //             hintStyle: GoogleFonts.poppins(
+                                      //               fontSize: 12,
+                                      //             ),
+                                      //             border: OutlineInputBorder(
+                                      //                 borderRadius:
+                                      //                     BorderRadius.circular(
+                                      //                         50))),
+                                      //       ),
+                                      //     ),
+                                      //     const SizedBox(
+                                      //       width: 20,
+                                      //     ),
+                                      //     TextButton(
+                                      //         style: TextButton.styleFrom(
+                                      //             backgroundColor: Colors.black87,
+                                      //             shape: RoundedRectangleBorder(
+                                      //                 borderRadius:
+                                      //                     BorderRadius.circular(
+                                      //                         30))),
+                                      //         onPressed: () {},
+                                      //         child: Container(
+                                      //           height: 45,
+                                      //           width: 100,
+                                      //           child: Center(
+                                      //             child: Text(
+                                      //               'Get Video Link',
+                                      //               style: GoogleFonts.poppins(
+                                      //                 color: Colors.white,
+                                      //                 fontSize: 13,
+                                      //               ),
+                                      //             ),
+                                      //           ),
+                                      //         ))
+                                      //   ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),
-                      // Container(
-                      //   height: 600,
-                      //   color: Colors.white,
-                      //   width: MediaQuery.of(context).size.width * 0.55,
-                      //   child: Stack(
-                      //     clipBehavior: Clip.none,
-                      //     children: const [
-                      //       ProfileImage(
-                      //         top: 140,
-                      //         left: 90,
-                      //         diameter: 200,
-                      //         image:
-                      //             'https://media.istockphoto.com/photos/germany-stuttgart-magical-orange-sunset-sky-above-ripe-grain-field-picture-id1280715716?b=1&k=20&m=1280715716&s=170667a&w=0&h=1Gce2BdmCjkg_6l7_YjeE-I9U79nWrOGAGx4iLmv_qg=',
-                      //       ),
-                      //       ProfileImage(
-                      //         top: 160,
-                      //         left: 310,
-                      //         diameter: 100,
-                      //         image:
-                      //             'https://media.istockphoto.com/photos/we-herd-you-were-looking-for-some-magnificent-cattle-picture-id1303666715?b=1&k=20&m=1303666715&s=170667a&w=0&h=mOQcfUp6wdVwwVtoigfMQZHLGv4RWUzm_5PKvZc58go=',
-                      //       ),
-                      //       ProfileImage(
-                      //         top: 275,
-                      //         left: 280,
-                      //         diameter: 280,
-                      //         image:
-                      //             'https://images.unsplash.com/photo-1592158141916-399d9e7d6afc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFybXN8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60',
-                      //       ),
-                      //       ProfileImage(
-                      //         top: 360,
-                      //         left: 90,
-                      //         diameter: 170,
-                      //         image:
-                      //             'https://media.istockphoto.com/photos/fresh-green-soy-plants-on-the-field-in-spring-rows-of-young-soybean-picture-id1303980089?b=1&k=20&m=1303980089&s=170667a&w=0&h=vZkqMTfNKw8kd8FbsvWbuL-BHe0PKn5fqu-lbP22SeQ=',
-                      //       ),
-                      //     ],
-                      //   ),
-                      // )
                     ],
                   ),
-                  Header(),
-                  
+                  const Header(),
                 ],
               ),
               Container(
-                height: 400,
+                height: 300,
                 width: double.infinity,
                 color: Colors.white,
                 child: Stack(
@@ -199,83 +209,59 @@ class _SolutionScreenState extends State<SolutionScreen> {
                         ),
                       ),
                     ),
-                    // Column(
-                    //   children: [
-                    //     Text(
-                    //       'How it Works',
-                    //       style: GoogleFonts.poppins(
-                    //         fontSize: 20,
-                    //         fontWeight: FontWeight.w700,
-                    //       ),
-                    //     ),
-                    //     SizedBox(
-                    //       height: 40,
-                    //     ),
-                    //     Row(
-                    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    //       children: const [
-                    //         InfoPallete(
-                    //           title: 'Community',
-                    //           icon: Icons.people_rounded,
-                    //           text: 'Farming is the backbone of the humanity.',
-                    //         ),
-                    //         InfoPallete(
-                    //           title: 'OverView Reports',
-                    //           icon: Icons.pie_chart_rounded,
-                    //           text: 'View Crop Reports.',
-                    //         ),
-                    //         InfoPallete(
-                    //           title: 'Dashboard',
-                    //           icon: Icons.person_rounded,
-                    //           text: 'View Statistics.',
-                    //         ),
-                    //       ],
-                    //     ),
-                    //     SizedBox(
-                    //       height: 60,
-                    //     ),
-                    //     TextButton(
-                    //         style: TextButton.styleFrom(
-                    //             backgroundColor: Colors.white,
-                    //             primary: Colors.black87,
-                    //             padding: EdgeInsets.all(0)),
-                    //         onPressed: () {},
-                    //         child: Container(
-                    //           padding: EdgeInsets.symmetric(
-                    //               horizontal: 30, vertical: 8),
-                    //           decoration: BoxDecoration(
-                    //             borderRadius: BorderRadius.circular(40),
-                    //             border: Border.all(
-                    //               color: Color.fromRGBO(66, 66, 66, 1),
-                    //             ),
-                    //           ),
-                    //           child: Text(
-                    //             'Explore More',
-                    //             style: GoogleFonts.poppins(
-                    //                 fontSize: 12, fontWeight: FontWeight.w800),
-                    //           ),
-                    //         ))
-                    //   ],
-                    // )
+                    Column(
+                      children: [
+                        const SizedBox(
+                          height: 40,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        ),
+                        const SizedBox(
+                          height: 60,
+                        ),
+                        TextButton(
+                            style: TextButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                primary: Colors.black87,
+                                padding: const EdgeInsets.all(0)),
+                            onPressed: () {},
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 30, vertical: 8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40),
+                                border: Border.all(
+                                  color: const Color.fromRGBO(66, 66, 66, 1),
+                                ),
+                              ),
+                              child: Text(
+                                'Explore More',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12, fontWeight: FontWeight.w800),
+                              ),
+                            ))
+                      ],
+                    )
                   ],
                 ),
               ),
               Container(
-                height: 520,
+                height: 60,
                 width: MediaQuery.of(context).size.width,
                 color: Colors.white,
                 child: Stack(
                   clipBehavior: Clip.none,
-                  children: [
-                    Positioned(
-                        left: -250,
-                        child: Container(
-                          height: 450,
-                          width: 700,
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 18, 221, 45),
-                              borderRadius: BorderRadius.circular(400)),
-                        )),
+                  children: const [
+                    // Positioned(
+                    //     left: -250,
+                    //     child: Container(
+                    //       height: 450,
+                    //       width: 700,
+                    //       decoration: BoxDecoration(
+                    //           color: const Color.fromARGB(255, 18, 221, 45),
+                    //           borderRadius: BorderRadius.circular(400)),
+                    //     )),
                     // Positioned(
                     //   top: 20,
                     //   left: 100,
@@ -347,45 +333,7 @@ class _SolutionScreenState extends State<SolutionScreen> {
               //   color: Color.fromARGB(255, 150, 146, 146),
               //   thickness: 0.5,
               // ),
-              SizedBox(
-                height: 100,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    RichText(
-                        text: TextSpan(children: [
-                      TextSpan(text: 'Follow Smart Farming on ',style: GoogleFonts.poppins()),
-                      TextSpan(
-                          text: 'Twitter,',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan( text: 'Instagram ',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan(
-                            text: 'and '
-                          ),
-                          TextSpan( text: 'Facebook,',
-                          style: GoogleFonts.poppins(
-                            textStyle: linkStyle,
-                          ),
-                          recognizer: TapGestureRecognizer()..onTap = () {}),
-                          TextSpan(
-                            text: ' .'
-                          )
-                    ])),
-                    Text(
-                      'Developed By Vamshi with ❤️',
-                      style: GoogleFonts.poppins(
-                          fontSize: 12, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
+              BottonBar()
             ],
           ),
         ),
@@ -393,5 +341,3 @@ class _SolutionScreenState extends State<SolutionScreen> {
     );
   }
 }
-
-
